@@ -1,4 +1,6 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Taken: Official Story by Lilith MacArthur</title><style>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Taken: Official Story by Lilith MacArthur</title><style>
+
 /* cspell:disable-file */
 /* webkit printing magic: print all background colors */
 html {
@@ -666,26 +668,123 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 
- body {
-        padding: 25px;
-        background-color: white;
-        color: black;
-        font-size: 16px;
-      }
-      .dark-mode {
-        background-color: black;
-        color: white;
-      }
-</style></head><body><article id="ae2530ba-a2d1-46c0-8e01-bd2761d67cf1" class="page serif"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1560536270-b5855082dd85?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://www.notion.so/icons/navigation_brown.svg"/></div><h1 class="page-title">Taken</h1></header>
-    <div>
-      <button onclick="darkMode()">Darkmode</button>
-    </div>
+
+
+    	
+		/* Light Mode Button
+		--------------------------- */ 
+
+		.light-mode-button {
+			background:0;
+		    border: 0;
+		    box-sizing: border-box;
+		    cursor: pointer;
+		    width: 30px;
+		    height: 16px;
+		    position: relative;
+		    border: 1px solid rgba(255,255,255,0);
+
+		    /* Fixed position for this demo */
+		    position: fixed;
+		    top:16px;
+		    right:16px;
+		}
+
+		.light-mode-button:focus {
+			outline:none; /* Not ideal for accessibility */
+		}
+
+		.light-mode-button span:nth-child(1) {
+			position: absolute;
+			top:0;
+		    left:0;
+		    width: 30px;
+		    height:16px;
+		    background-color: #d6d7db;
+		    border-radius: 9px;
+		    box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
+		    transition: .3s;
+		}
+
+		.light-mode-button span:nth-child(2) {
+			position: absolute;
+			top:3px;
+		    left:3px;
+		    width: 10px;
+		    height: 10px;
+		    background-color: #fff;
+		    border-radius: 50%;
+		    box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
+		    transition: .3s;
+		}
+
+
+		/* Light & Dark Mode Styles
+		--------------------------- */ 
+
+		body {
+			background-color: #f6f6f6;
+            transition: background-color .3s;
+        }
+
+		body[light-mode=dark] {
+            background-color: #141516;
+            color: #ced4e2;
+        }
+
+        body[light-mode="dark"] .light-mode-button span:nth-child(1){
+            background-color: #ced4e2;
+            color: #141516;
+        }
+
+        body[light-mode=dark] .light-mode-button span:nth-child(2) {
+		    left: 17px;
+		    background-color: #141516;
+		}
+
+
+</style></head><body>
+<script>
+        var app = document.getElementsByTagName("BODY")[0];
+        if (localStorage.lightMode == "dark") {
+            app.setAttribute("light-mode", "dark");
+        }
+    </script>
+
+
+	<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+    	<span></span>
+    	<span></span>
+    </button> 
+
+
     <script>
-      function darkMode() {
-        var element = document.body;
-        element.classList.toggle("dark-mode");
-      }
-    </script><h1 id="bce1d44b-41a9-4869-868b-26ba3c546d11" class=""><strong>Taken: </strong>The Official Story</h1><p id="4f4148e9-d75f-4fdb-8d0a-98939921cda5" class="">By Lilith MacArthur</p><nav id="7c929cc4-8291-4d76-ae27-73a6a0c436e5" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#bce1d44b-41a9-4869-868b-26ba3c546d11"><strong>Taken: </strong>The Official Story</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b089b3de-383e-4e08-8599-4c361f34211c"><span style="border-bottom:0.05em solid">The Story Map</span></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#aa04d9ec-b207-426c-bc67-4dc853837b2b"><em>End</em></a></div></nav><h2 id="b089b3de-383e-4e08-8599-4c361f34211c" class=""><span style="border-bottom:0.05em solid">The Story Map</span></h2><ul id="82a2bd5b-6e7c-42b2-b2a9-9df2251796f0" class="toggle"><li><details open=""><summary>           <em>Autumn Springs</em></summary><p id="88eb8e52-9056-4916-9400-7873b7d90d69" class="">    Chapter One: Where the River Runs</p><p id="5d0f1415-49e7-4a4b-a623-b7339c97a437" class="">    Chapter Two: What’s Not Yours Is Mine</p><p id="27c6c225-c583-4f78-857d-90831584b9f8" class="">    Chapter Three: Family Matters</p></details></li></ul><ul id="ae687e86-c9b0-4934-a428-6dbcba23b36f" class="toggle"><li><details open=""><summary>          <em>Winter’s Wake</em></summary><p id="7271d2e3-5fb9-4e7f-902c-0143bd0df9e3" class="">Chapter Four: Awake and Alone</p><p id="6a49e9b0-e104-4726-b78d-43d0029cbcea" class="">Chapter Five: Stand Completely Still</p><p id="3c6190c6-72f0-45e4-943f-2cbc6dd88d20" class="">Chapter Six: They can’t see, only listen</p></details></li></ul><ul id="1dbd1590-b2bc-44b8-b30f-04f153a31da8" class="toggle"><li><details open=""><summary>          <em>Spring’s Hour</em></summary><p id="71d4a893-c7c1-427c-aa24-2cd76b242e41" class="">Chapter Seven: The Wishing Well</p><p id="421f8feb-162d-43c0-b939-dd6fe02dfd58" class="">Chapter Eight: Eye of the Storm</p><p id="bf71be2d-7f06-4717-afe4-faace160ef2a" class="">Chapter Nine: For Granted</p><p id="cb6bacde-e0fb-4a07-a8b0-21cdb1e2e53e" class="">Chapter Ten: Reunited</p><p id="93eaa370-d4cc-4887-9e4a-d43ca301e5e8" class="">Chapter Eleven: Risen</p><p id="103c2658-8da2-4e59-b9d1-470bb9c7fd74" class="">Chapter Twelve: The Second Great War</p><p id="aa8e6617-12e4-4a57-8d1a-aab08da7db39" class="">Chapter Thirteen: Betrayal</p><p id="314405c7-d1d6-461b-ad78-8dc21a2be655" class="">Chapter Fourteen: Survival</p><p id="086f08b5-97da-49c0-a84d-9b27f6ff8e40" class="">Chapter Fifteen: Confession</p><p id="1fffa809-f623-4854-a7c1-33163a8a880f" class="">Chapter Sixteen: What’s Mine, Isn’t Yours</p><p id="f3b6ab35-ed9a-411d-803c-9e4738cd48e5" class="">Chapter Seventeen: Moving Forward</p><p id="512c06d4-4265-4d4e-99c8-c59d9099e7d9" class="">Chapter Eighteen: A Trickster’s Secret</p><p id="84e6cdea-6aa7-4594-a9dd-f0e2454cfabd" class="">Chapter Nineteen: Ghost Town</p><p id="26bfe223-66bc-4ea4-8eb4-e76d328839a9" class="">Chapter Twenty: Full House</p></details></li></ul><ul id="06d41b2c-26e0-4580-bf87-bbc848a1e475" class="toggle"><li><details open=""><summary>         <em>Summer’s Blaze</em></summary><p id="bdca720f-a38f-40ec-b319-0637f1bc91da" class="">Chapter Twenty-One: Through the Harshland’s</p><p id="ae8660f2-ae37-4635-a6af-3113e3cefa22" class="">Chapter Twenty-Two: Finding a Way</p><p id="63d73d04-b350-4f4f-94c9-a5d2e3e44639" class="">Chapter Twenty-Three: An Impossible Bridge to Cross</p><p id="d0e5da62-3874-44cf-8059-be3981741fed" class="">Chapter Twenty-Four: Take it in fourths</p><p id="ba691325-c4b3-4cd2-8e31-9dd1222deb90" class="">Chapter Twenty-Five: Victory</p></details></li></ul><h2 id="aa04d9ec-b207-426c-bc67-4dc853837b2b" class=""><em>End</em></h2><hr id="6f7f4b9f-6a5b-4d8d-bbaf-2f0beca0f58c"/><ul id="fdcac784-5afc-4e28-8cbf-c8ae147b0499" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid">Part One: </span><span style="border-bottom:0.05em solid"><em>Autumn Springs</em></span></summary><ul id="f9215769-bc5c-44be-ac11-1445c5622585" class="toggle"><li><details open=""><summary>Chapter One: Where the River Runs</summary><p id="0c60b305-f77c-4fa9-9a0f-55c55b7621b2" class="">     <mark class="highlight-red"><strong>It’s late at night in mid-autumn.</strong></mark> The moon is high in the sky. Out here in the forest you can hear the small sounds of every small creature, of every natural force whispering itself to you. The crickets chirp, other animals are either sleeping, or hunting. I’m sat beside the riverside listening to the calming sound of the cold waters wash over the rocks and seep into the rich soil covered in grass above. The moon reflects off the water causing a bright white shimmer that’s such a beautiful sight. About three months ago I was run from my own palace, a princess lost in a forest. Finding my way to Hazelfine is certainly not an easy task.</p><p id="46938793-de0d-4197-a72a-a5ac41c74a62" class="">Hazelfine is a small town far from where I was situated not just three months ago. I’ve travelled so far and now once I make it across this river in the morning I hope to take my stay in Hazelfine.</p><p id="fdda5975-0190-4748-bd04-7666583e993b" class="">An old friend has lived here, and if he hasn’t forgotten me, or worse -begun to hate me then I can only hope for Ridlen’s assistance.</p><p id="4371a1cc-707a-43e3-9421-535eda212af0" class="">My name is Maelora, and now I shall sleep.</p><h2 id="7e7589ed-2e18-40be-886a-213a364ccd7f" class="">...</h2><p id="460ebe98-1ebf-42df-9ed1-981f29aea21e" class="">
+		
+        function toggle_light_mode() {
+            var app = document.getElementsByTagName("BODY")[0];
+            if (localStorage.lightMode == "dark") {
+                localStorage.lightMode = "light";
+                app.setAttribute("light-mode", "light");
+            } else {
+                localStorage.lightMode = "dark";
+                app.setAttribute("light-mode", "dark");
+            }       
+        }
+
+		window.addEventListener("storage", function () {
+			if (localStorage.lightMode == "dark") {
+				app.setAttribute("light-mode", "dark");
+			} else {
+				app.setAttribute("light-mode", "light");
+			}
+		}, false);
+		
+    </script>
+
+
+<div id="trend_notification_app" class="trend_notification_app_outer"><div id="trend_notification"><div id="trend_notification_con" class="clearfix"></div></div></div>
+<article id="ae2530ba-a2d1-46c0-8e01-bd2761d67cf1" class="page serif"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1560536270-b5855082dd85?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://www.notion.so/icons/navigation_brown.svg"/></div><h1 class="page-title">Taken</h1></header>
+<h1 id="bce1d44b-41a9-4869-868b-26ba3c546d11" class=""><strong>Taken: </strong>The Official Story</h1><p id="4f4148e9-d75f-4fdb-8d0a-98939921cda5" class="">By Lilith MacArthur</p><nav id="7c929cc4-8291-4d76-ae27-73a6a0c436e5" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#bce1d44b-41a9-4869-868b-26ba3c546d11"><strong>Taken: </strong>The Official Story</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b089b3de-383e-4e08-8599-4c361f34211c"><span style="border-bottom:0.05em solid">The Story Map</span></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#aa04d9ec-b207-426c-bc67-4dc853837b2b"><em>End</em></a></div></nav><h2 id="b089b3de-383e-4e08-8599-4c361f34211c" class=""><span style="border-bottom:0.05em solid">The Story Map</span></h2><ul id="82a2bd5b-6e7c-42b2-b2a9-9df2251796f0" class="toggle"><li><details open=""><summary>           <em>Autumn Springs</em></summary><p id="88eb8e52-9056-4916-9400-7873b7d90d69" class="">    Chapter One: Where the River Runs</p><p id="5d0f1415-49e7-4a4b-a623-b7339c97a437" class="">    Chapter Two: What’s Not Yours Is Mine</p><p id="27c6c225-c583-4f78-857d-90831584b9f8" class="">    Chapter Three: Family Matters</p></details></li></ul><ul id="ae687e86-c9b0-4934-a428-6dbcba23b36f" class="toggle"><li><details open=""><summary>          <em>Winter’s Wake</em></summary><p id="7271d2e3-5fb9-4e7f-902c-0143bd0df9e3" class="">Chapter Four: Awake and Alone</p><p id="6a49e9b0-e104-4726-b78d-43d0029cbcea" class="">Chapter Five: Stand Completely Still</p><p id="3c6190c6-72f0-45e4-943f-2cbc6dd88d20" class="">Chapter Six: They can’t see, only listen</p></details></li></ul><ul id="1dbd1590-b2bc-44b8-b30f-04f153a31da8" class="toggle"><li><details open=""><summary>          <em>Spring’s Hour</em></summary><p id="71d4a893-c7c1-427c-aa24-2cd76b242e41" class="">Chapter Seven: The Wishing Well</p><p id="421f8feb-162d-43c0-b939-dd6fe02dfd58" class="">Chapter Eight: Eye of the Storm</p><p id="bf71be2d-7f06-4717-afe4-faace160ef2a" class="">Chapter Nine: For Granted</p><p id="cb6bacde-e0fb-4a07-a8b0-21cdb1e2e53e" class="">Chapter Ten: Reunited</p><p id="93eaa370-d4cc-4887-9e4a-d43ca301e5e8" class="">Chapter Eleven: Risen</p><p id="103c2658-8da2-4e59-b9d1-470bb9c7fd74" class="">Chapter Twelve: The Second Great War</p><p id="aa8e6617-12e4-4a57-8d1a-aab08da7db39" class="">Chapter Thirteen: Betrayal</p><p id="314405c7-d1d6-461b-ad78-8dc21a2be655" class="">Chapter Fourteen: Survival</p><p id="086f08b5-97da-49c0-a84d-9b27f6ff8e40" class="">Chapter Fifteen: Confession</p><p id="1fffa809-f623-4854-a7c1-33163a8a880f" class="">Chapter Sixteen: What’s Mine, Isn’t Yours</p><p id="f3b6ab35-ed9a-411d-803c-9e4738cd48e5" class="">Chapter Seventeen: Moving Forward</p><p id="512c06d4-4265-4d4e-99c8-c59d9099e7d9" class="">Chapter Eighteen: A Trickster’s Secret</p><p id="84e6cdea-6aa7-4594-a9dd-f0e2454cfabd" class="">Chapter Nineteen: Ghost Town</p><p id="26bfe223-66bc-4ea4-8eb4-e76d328839a9" class="">Chapter Twenty: Full House</p></details></li></ul><ul id="06d41b2c-26e0-4580-bf87-bbc848a1e475" class="toggle"><li><details open=""><summary>         <em>Summer’s Blaze</em></summary><p id="bdca720f-a38f-40ec-b319-0637f1bc91da" class="">Chapter Twenty-One: Through the Harshland’s</p><p id="ae8660f2-ae37-4635-a6af-3113e3cefa22" class="">Chapter Twenty-Two: Finding a Way</p><p id="63d73d04-b350-4f4f-94c9-a5d2e3e44639" class="">Chapter Twenty-Three: An Impossible Bridge to Cross</p><p id="d0e5da62-3874-44cf-8059-be3981741fed" class="">Chapter Twenty-Four: Take it in fourths</p><p id="ba691325-c4b3-4cd2-8e31-9dd1222deb90" class="">Chapter Twenty-Five: Victory</p></details></li></ul><h2 id="aa04d9ec-b207-426c-bc67-4dc853837b2b" class=""><em>End</em></h2><hr id="6f7f4b9f-6a5b-4d8d-bbaf-2f0beca0f58c"/><ul id="fdcac784-5afc-4e28-8cbf-c8ae147b0499" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid">Part One: </span><span style="border-bottom:0.05em solid"><em>Autumn Springs</em></span></summary><ul id="f9215769-bc5c-44be-ac11-1445c5622585" class="toggle"><li><details open=""><summary>Chapter One: Where the River Runs</summary><p id="0c60b305-f77c-4fa9-9a0f-55c55b7621b2" class="">     <mark class="highlight-red"><strong>It’s late at night in mid-autumn.</strong></mark> The moon is high in the sky. Out here in the forest you can hear the small sounds of every small creature, of every natural force whispering itself to you. The crickets chirp, other animals are either sleeping, or hunting. I’m sat beside the riverside listening to the calming sound of the cold waters wash over the rocks and seep into the rich soil covered in grass above. The moon reflects off the water causing a bright white shimmer that’s such a beautiful sight. About three months ago I was run from my own palace, a princess lost in a forest. Finding my way to Hazelfine is certainly not an easy task.</p><p id="46938793-de0d-4197-a72a-a5ac41c74a62" class="">Hazelfine is a small town far from where I was situated not just three months ago. I’ve travelled so far and now once I make it across this river in the morning I hope to take my stay in Hazelfine.</p><p id="fdda5975-0190-4748-bd04-7666583e993b" class="">An old friend has lived here, and if he hasn’t forgotten me, or worse -begun to hate me then I can only hope for Ridlen’s assistance.</p><p id="4371a1cc-707a-43e3-9421-535eda212af0" class="">My name is Maelora, and now I shall sleep.</p><h2 id="7e7589ed-2e18-40be-886a-213a364ccd7f" class="">...</h2><p id="460ebe98-1ebf-42df-9ed1-981f29aea21e" class="">
 </p><p id="1a1ef280-0a47-4c90-9221-13e47413cd9b" class="">“Hey, wake up!” whisper’s an unknown voice.</p><p id="08c28edf-29de-43df-9417-526c1e23282e" class="">“Who are you?” I asked.</p><p id="a099cd19-9043-48b6-ac3c-adf491bf19d2" class="">“Listen, my name is Carn, you’re the Princess of the Southern Palace, right? Ridlen’s taken it upon himself to steal it from you. The palace is <strong>taken.</strong>”</p><p id="6d34268a-36ff-42e1-aeb6-3d4168e32f6c" class="">“What the fuck?! YOU’RE JOKING?!” I screamed.</p><p id="3d8eb78b-c01d-4548-b538-52bbb1a0f98f" class="">“Shh! The guards will hear you, Ridlen left you a note, here.” Carn tells me as he hands me a note.</p><p id="c03089cc-928c-4faf-a8c3-ea2ca873246c" class="">I read the note. My eyes furrow into an angry look.</p><p id="a362d31e-1804-42a8-9739-ed4381033033" class="">I tear it up and throw it into the river.</p><p id="dea8d007-c9b4-4609-a58c-570fae323177" class="">“Ridlen can go to hell.” I hastily pack my things and Carn stops me for one last moment before I leave.</p><p id="96f7f609-f3da-4367-9762-b4396e172c69" class="">“Listen, I know he was supposed to be a friend but...he’s not. I know you’re not going to stay here anymore but take this with you.” He hands me a map of the land facing northeast. “You might find this useful, if you travel northeast you’ll find some assistance there.” Carn explains</p><p id="9863c09b-0e6e-46e7-8539-2d3ba9f5d903" class="">“Like who?” I asked a bit more gently than I was truly feeling.</p><p id="4bbad6ba-e189-479b-9567-e0e3245934df" class="">“Your family.”</p></details></li></ul><ul id="a23a495c-dca4-4b9d-91d0-e97ced0342a9" class="toggle"><li><details open=""><summary>Chapter Two: What’s Not Yours Is Mine</summary><p id="d3b9fa7a-e9e6-45fd-8682-eccd66a2f3ad" class="">     <mark class="highlight-teal"><strong>I trek through the still woods.</strong></mark> There hasn’t been movement in what feels like a lifetime. No running water, no animals. There are quite a few dead trees however. The forest taunts me on my ability to stay sane, as it’s air gives a sense of a false ground. If you’re not careful you’ll tend to escape reality and lose your mind over a fallen redwood. Take it as you will.</p><p id="9d81aef7-3da8-4011-a6ad-82ac8b5c5437" class="">As I maintained my composure I followed Carn’s map and keep heading northeast. Family. My grandmother lives out here, and she fought in The Great War. An incredible fighter and despite her age you wouldn’t want to get on her bad side. Feisty old grandma indeed.</p><p id="092041ce-5a0a-40eb-b6ec-0c36995bbe60" class="">I come to a cliff’s edge just at a short clearing in the trees. I have a whole view of Batterlin, the town where I grew up. It feels strange returning home after so long, but the situation’s changed. I need grandma’s help. Perhaps even Darlign will be able to take time off of the tavern and join me.</p><p id="38924552-c1f8-48c9-8072-c0cce4914c59" class="">I thought back to the note Ridlen had given Carn to give to me. It stated “What’s Not Yours is Mine”. This angered me beyond control. Ridlen was always jealous, but I never expected him to trick an entire palace to throwing me out just so he could take over. He’s ruining the land and the people. I’ve never resented him before but he need’s to be stopped. “What’s Not Yours is Mine”. He’s still as ridiculous as ever isn’t he? Figures, his lack of education will be his downfall.</p></details></li></ul><ul id="305bba71-87dc-4b9a-9046-e60384af4ec4" class="toggle"><li><details open=""><summary>Chapter Three: Family Matters</summary><p id="7e63923f-28a2-4003-a28b-cc22831322af" class="">     <mark class="highlight-gray"><strong>“Hey Gran!” I called out.</strong></mark></p><p id="c3ca7af8-9f2e-4e32-85f9-6ebd8b1d8f60" class="">Grandma turns around quickly and I see her eyes glitter in the sunlight once she sees me.</p><p id="2483b7a1-2ce7-43fb-a402-7754fd86ddbd" class="">“Maelora!” She called out as she ran to me and hugged me in one of her tight bear hugs.</p><p id="6bbf3eb9-b4f9-4219-bc9c-adbe2ad28847" class="">“You’re as strong as ever Gran, my bones might break before yours!” I exclaimed.</p><p id="960f24c4-711a-4fcb-a5bf-fdf57cf4d27b" class="">“Oh shush you, I’m so glad to see you again! How’s that palace of yours doing?” She asked.</p><p id="7abd7e91-6390-4c69-b7ad-61ad92cb3d10" class="">“Ridlen tricked the entire palace and the surrounding southern front. I’ve been kicked out because of his attack. He’s repulsive, claiming that the southern land was never my own and thus should be owned by him. ‘What’s Not Yours Is Mine’ he said to me in a letter given to me by.”</p><p id="e4d46c4d-2acc-4943-9185-2e927cf746ab" class="">“Your friend betrayed you? Horrible. Ridlen however...He’s never had much of an education, he must have been busy since you left. I heard from young Carn that he used the library a lot more often than before. He’s educated himself. A lot more difficult to handle then you might think there hun.” Gran goes on.</p><p id="f5e38fb3-63df-45f5-89b7-e09bde3e5377" class="">“I started thinking of that once I dropped off the cliff side, he’s gotten smarter.” I expressed with a slight frown.</p><p id="d76818bd-7124-445b-a335-17b8671c2955" class="">“Oh now lighten up you, I’m baking you a pie tonight for dessert, I’ve already made up some fresh food for dinner in the house. Darlign is joining us today, I hope you don’t mind” She lightly rapped my head with a stick as she smiled at me.</p><p id="36128a5e-9870-4f74-8862-7593a79878d5" class="">“Yeah that sounds wonderful thanks Gran!”</p><p id="52819f8b-7d05-4eb0-930a-4f63b3c8917a" class="">“Now you’ve travelled far, your room is where it always is, upstairs. Go rest up for the evening and I’ll come get you for dinner, okay?” Gran looked at me with an eye of interest.</p><p id="ee2d65e4-a5e5-47f4-b31c-0549309760f1" class="">“I’ll do that, I’m beat.” I explained</p><p id="95de1511-d63b-4472-9644-167a3ddac217" class="">“Good, sometime this week I need to have a talk with you about...family matters. You’ve always wanted to know the truth but I never got to tell you before you left, I figure if you’re willing I could take the time to–” She goes on to explain.</p><p id="7952c8c2-f634-40ce-964d-57d8d413d85d" class="">“Gran!” I laugh. “It’s okay, I’m going to rest up and you can tell me everything whenever you feel is right okay? I’d love to hear about our family this week, and I one hundred percent am glad that you’re taking the time to tell me this week, so thank you...even if it is several years late” I slightly giggled and smiled gently at her.</p><p id="3083617f-a87c-4a0d-95d0-a25c16c68b0a" class="">“Oh ho! You’re still quite the comedian, Princess or Jester? You’re still my gran-daughter either way Maelora, now go rest up, I’ve kept you long enough” She laughed and waved me off to bed.</p><p id="01883aa3-edd7-45b5-8e16-4d7fd89a3e7c" class="">I walked into the house, mentally taking in all of the farm land, the barn, the livestock and all of the surrounding area outside before stepping in.</p><p id="049c0040-df88-440a-a0c3-bc51934f3693" class="">I looked around and noticed not much had changed since I left, the place is always how Gran liked it, plus it always worked for me and everyone else too. People called her house ‘rich-brick’ because despite not being expensive, it could fool those who didn’t know what rich is in this small town of Batterlin.</p><p id="525dce44-46ed-4435-b87f-6a7bd61764f1" class="">I carefully crept up the stairs and opened the attic door and crawled in, laid my belongings up against the wall beside me and I laid down for bed, wrapped the covers up to my neck and I rolled over and fell asleep.</p><p id="612b56d0-342e-4229-851a-c9f166ee0ece" class="">“Hey sleeping beauty, time for dinner Maelora!”</p><p id="3e996950-9be2-4116-beb5-052e2d86a135" class="">Gran was shaking me gently and calling me to dinner.</p><p id="371f04ef-983e-411b-87ff-deff58f91cb9" class="">I sat up and stretched while yawning fairly wide.</p><p id="c0be1050-e18e-496d-a140-d27e4c1376c3" class="">“I’ll be down in a moment Gran!” I excitedly yet tiredly explained.</p><p id="ab1706d8-3fea-4142-af7a-49a4084e8b17" class="">“Wonderful, Darlign missed you too Mae, he’s downstairs insisting we wait on eating until you get your plate. Go wash up and we’ll see you there!” She smiled and left to go downstairs.</p><p id="15a6a824-0fd1-46c8-850c-bcba72d761e4" class="">I put on some proper clothes, fixed up my hair and eventually went downstairs to see Gran and Darlign waiting on me at the table.</p><p id="d6284094-1c9f-453b-b6d0-39c9c80e554b" class="">“Well come on now, I suppose you don’t want your eggs cold either?” Gran jokingly spoke to me.</p><p id="284d9416-3691-4323-ad1c-259c7f2ad097" class="">“Oh my! There’s Princess Maelora!” Darlign said as he turned around in his chair to look at me.</p><p id="49d063ec-58c0-4054-a9db-1546001bb08b" class="">“Not anymore, thanks to Ridlen.” I said with a hollow voice.</p><p id="42199d78-8008-4fec-8bca-f5b2d1f0873a" class="">“The southern front is still yours, earned and lead for years by you. Getting it stolen from a fake ally is just robbery it doesn’t make Ridlen king or prince, it makes him a thief and a savage.” Darlign explained to me.</p><p id="e21a0d7b-ae87-4893-9272-dbe8b5897610" class="">“I just hope I can get my land back some day...” I said sadly as I sat down and picked at my food.</p><p id="bd480bd2-ea4e-4ae8-96a1-aba058a965cb" class="">Darlign looked down on me with a worried look and pat me on the back, turned my chair and hugged me. Darlign is big, he’s roughly seven to eight feet tall. And a lot of muscle. He hugged me softly. For the first time this entire journey I cried, and directly into Darlign’s arms.</p><p id="8b93c1a9-8368-414c-9b5a-e1567b7e40d7" class="">I soon stopped and collected myself and whispered a thanks to him before I sniffled and began to eat, I apologized a couple times before Gran told me that there’s no reason to apologize, that I did nothing wrong. Soon I cheered up and we had a wonderful dinner, we cracked jokes, ate wonderful food, and had deep conversations. Eventually it got very late, but we didn’t care. I had found my home again, and I was with the very people I love and care about. We all sat around the fireplace and fell asleep in unison.</p><h2 id="6771908a-5883-496a-a864-e45f416d6ad8" class="">...</h2><p id="afd29649-bd48-497d-8d1b-f0118f03d69e" class="">
 </p><p id="d1550e96-6f78-4010-a68f-a62fccafab9f" class="">“...Whew! Farm work still takes quite some effort huh Gran?” I called out to Gran as I tried my best at chopping wood.</p><p id="65835ab2-10b5-4251-9f14-1bb3750f0559" class="">“Oh it’s a great workout Mae, trust me I’ve been doing it for years!” Gran smiled and called back as she milked the fourth cow in a row.</p><p id="b3746996-ca00-40b7-bd56-f2a5e73e0a06" class="">A few hours later it had become midday, We decided to take a break. Gran slumped down in some hay beside the cows pen and started petting one of their nose’s mindlessly, I sat down gently beside her.</p><p id="adaf3132-2516-4884-9d7f-88b97c0e7d34" class="">“I’m thinking just one more day and I’ll tell you every thing okay?” Gran smiled at me hopefully.</p><p id="24f785e0-4506-426c-b843-f5d9ed634095" class="">“Gran I’m not going anywhere soon until I have a plan, I know that you’re holding yourself to this promise, it’s okay. But yes, one more day and I’ll be glad to listen at last, thank you.” I explained as I rubbed her back gently.</p><p id="b5399f65-a4cd-433c-a1cc-d93b1305d356" class="">“You’re so kind and gentle, yet you’re such a strong fighter, you’re just like your parents, and me when I was younger.” Gran spoke out loud in awe to me.</p><p id="b3e8115e-75c4-406c-bb08-7154f93b7279" class="">I stared at Gran and spoke “It’s just one more day, I can wait”.</p><p id="9382d2a0-b139-4713-b621-8fc43bec4573" class="">
 </p><blockquote id="a935d9c0-10cc-4c16-9d4d-31f41c599bb9" class=""><em>The Next Day...</em></blockquote></details></li></ul><p id="97300748-99fb-46cc-8bff-bc0142f2cdf7" class="">
